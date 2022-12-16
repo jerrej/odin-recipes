@@ -9,21 +9,33 @@ body{
     margin: 0;
 }
 
+.wrapper{
+    margin-right: auto; 
+    margin-left:  auto; 
+    max-width: 960px;
+    padding-right: 10px;
+    padding-left:  10px;
+  }
+
 .container{
-    width: 80%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .block{
-    float: left;
-    width: 33.3%;
+    flex: 1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    font-weight: bold;
 }
 
 .block img{
-    width: 80%;
+    height: 250px;
+    width: auto;
 }
 
 .block img:hover{
@@ -33,18 +45,16 @@ body{
 }
 
 .ingredients{
-    float: left;
-    width: 50%;  
+    flex: 1; 
 }
 
-.showcase{
-    float: left;
-    width: 50%;  
+.showcase{ 
+    flex: 1; 
 }
 
 .showcase img{
-    max-width:100%;
-    max-height:100%;
+    max-width: 100%;
+    max-height: auto;
 }
 
 .instructions{
@@ -53,8 +63,20 @@ body{
 }
 
 #main-header{
+    font-size: 24px; 
+    text-decoration: underline;
     text-align: center;
+}
+
+#main-footer{
     font-size: 24px; 
     font-family: 'Indie Flower', cursive;
-    text-decoration: underline;
+    text-align: center;
 }
+
+
+@media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+  }
