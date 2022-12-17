@@ -110,9 +110,13 @@ body {
 
 #main-footer a {
     text-decoration: none;
-    color: #6e5494;
+    color: #000;
     font-size: 32px;
     float: right;
+}
+
+#git {
+    color: #6e5494;    
 }
 
 @media (max-width: 800px) {
